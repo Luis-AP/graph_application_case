@@ -14,6 +14,7 @@ Adicionalmente, se emplearán las clases `City` y `Route` para representar las c
 
 Emplando la base de datos y las clases mencionadas, se desea implementar un sistema que permita a la empresa determinar desde qué centros de distribución puede abastecer a cada una de las ciudades.
 
+
 ## Solución
 
 Para resolver este problema, se modela la red de distribución como un grafo, donde los nodos representan las ciudades y las aristas representan las rutas entre las ciudades.
@@ -56,4 +57,23 @@ Al ejecutar el módulo `solution`, se genera un archivo CSV por cada ciudad que 
 
 ```bash
 python -m exercise_2.solution
+```
+
+## Requerimientos
+
+Para ejecutar los scripts, se debe tener instalado Python 3.8 o superior. Además, se debe instalar las dependencias del proyecto. Para esto, se debe ejecutar el siguiente comando:
+
+```bash
+pip install -r requirements.txt
+```
+
+Además, se debe tener instalado MySQL 8.0 o superior.
+
+Por último, se debe crear un archivo `.env` en la raíz del proyecto, el cual debe contener las siguientes variables de entorno:
+
+```bash
+DATABASE_USERNAME = # Usuario de la base de datos
+DATABASE_PASSWORD = # Contraseña de la base de datos
+DATABASE_HOST = # Host de la base de datos
+DATABASE_PORT = # Puerto de la base de datos
 ```
