@@ -86,6 +86,6 @@ class Route:
                     writer.writerow(row)
         else:
             os.mkdir("paths")
-            os.mkdir("paths/excercise01")
-            os.mkdir("paths/excercise02")
+            os.mkdir("paths/exercise01")
+            os.mkdir("paths/exercise02")
             cls.to_csv(routes, file_name)

@@ -65,11 +65,11 @@ if __name__ == "__main__":
         # Guardamos las rutas tentativas en un archivo csv
         Route.to_csv(
             routes,
-            file_name=f"paths/excercise02/{city.name}(weight={total_weight(routes)}).csv",
+            file_name=f"paths/exercise02/{city.name}(weight={total_weight(routes)}).csv",
         )
 
     # Guardamos las rutas perfectas en un archivo csv
     Route.to_csv(
         perfect_routes,
-        file_name=f"paths/excercise02/solution(weight={total_weight(perfect_routes)}).csv",
+        file_name=f"paths/exercise02/solution(weight={total_weight(perfect_routes)}).csv",
     )
