@@ -28,13 +28,13 @@ Para poder analizar la solución planteda, se ha definido el paquete `exercise_1
 Al ejecutar el módulo `analysis`, se generan un archivo CSV por cada centro de distribución, el cual contiene la información de las distancias y recorridos hacia cada ciudad. Para esto se debe ejecutar el siguiente comando:
 
 ```bash
-python -m excercise01.analysis
+python -m exercise01.analysis
 ```
 
 Al ejecutar el módulo `solution`, se genera un archivo CSV tomando en cuenta la información de los dos centros de distribución. Para esto se debe ejecutar el siguiente comando:
 
 ```bash
-python -m excercise01.solution
+python -m exercise01.solution
 ```
 
 Los archivos generados se encuentran en la carpeta `paths/exercise_1/`.
@@ -56,7 +56,7 @@ Para poder analizar la solución planteda, se ha definido el paquete `exercise_2
 Al ejecutar el módulo `solution`, se genera un archivo CSV por cada ciudad que no sea un centro de distribución. Además, se genera un archivo CSV que contiene la mejor solución. Para esto se debe ejecutar el siguiente comando:
 
 ```bash
-python -m excercise02.solution
+python -m exercise02.solution
 ```
 
 ## Requerimientos
