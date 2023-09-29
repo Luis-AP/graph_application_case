@@ -5,7 +5,7 @@ from graphs.mygraph import ADTGraph
 from models.connection import DatabaseConnection
 from config import Config
 
-from utils import charge_vertices, charge_edges, seach_vertex, total_weight, Route
+from utils import charge_vertices, charge_edges, search_vertex, total_weight, Route
 
 
 if __name__ == "__main__":
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         # Dijkstra retorna una tupla con dos diccionarios, el primero contiene
         # el camino más corto desde el vértice de partida hasta cada uno de los
         # vértices del grafo, el segundo contiene la distancia desde el vértice
-        (cloud, distances) = graph.dijkstra(seach_vertex(graph, branch.city_id))
+        (cloud, distances) = graph.dijkstra(search_vertex(graph, branch.city_id))
         for vertex, distance in distances.items():
             # Creamos una ruta con la sucursal seleccionada como partida, la
             # distancia desde la sucursal hasta el vértice y el camino desde la
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         routes = best_routes.copy()
         # Empleamos Dijkstra nuevamente
         # Suponemos que la ciudad seleccionada es una sucursal
-        (cloud, distances) = graph.dijkstra(seach_vertex(graph, city.city_id))
+        (cloud, distances) = graph.dijkstra(search_vertex(graph, city.city_id))
         # Actualizamos las rutas con la nueva información
         for vertex, distance in distances.items():
             route = Route(city, distance, cloud[vertex])
