@@ -10,6 +10,8 @@ Se cuenta con una base de datos que contiene la información de las rutas entre 
 
 ![beer_distribution_der](https://i.ibb.co/yQbGkkY/beer-distribution-der.png)
 
+Estos archivos se encuentran en la carpeta `databases/`.
+
 Adicionalmente, se emplearán las clases `City` y `Route` para representar las ciudades y las rutas entre las ciudades, respectivamente.
 
 Emplando la base de datos y las clases mencionadas, se desea implementar un sistema que permita a la empresa determinar desde qué centros de distribución puede abastecer a cada una de las ciudades.
@@ -58,6 +60,30 @@ Al ejecutar el módulo `solution`, se genera un archivo CSV por cada ciudad que 
 ```bash
 python -m exercise02.solution
 ```
+
+## Ejercicio 3
+
+Buscamos determinar una solución óptima al problema del viajante, en este caso el viajanate es un vendedor de manualidades que desea visitar distintos puntos turísticos de una ciudad. Para esto, se desea determinar una ruta que permita al vendedor visitar todos los puntos turísticos de la ciudad, minimizando la distancia total recorrida.
+
+Se ha planteado un ejemplo mediante la base de datos `TouristCity`, la cual fue diseñada de en MySQL y puede ser consultada en mediante los archivos `tourist_city_create_objects.sql` y `tourist_city_load_data.sql`. A continuación se muestra el DER de la base de datos:
+
+![tourist_city_der](https://i.ibb.co/S7C1ft8/touristic-city-der.png)
+
+Estos archivos se encuentran en la carpeta `databases/`.
+
+## Solución
+
+Para resolver el problema de TSP se emplea una heurística, la del vecino más cercano. Esta heurística consiste en seleccionar el vértice más cercano al vértice actual, y así sucesivamente hasta que se hayan visitado todos los vértices.
+
+Para poder analizar la solución planteda, se ha definido el paquete `exercise_3` un módulo: `solution`.
+
+Al ejecutar el módulo `solution`, se genera un archivo CSV que contiene la ruta óptima. Para esto se debe ejecutar el siguiente comando:
+
+```bash
+python -m exercise03.solution
+```
+
+Este ejercicio se emplea únicamente como ejemplo del tema "Problemas de optimización" visto en la materia "Algorítmica". El mismo se encuentra disponible en la plataforma Moodle de la materia.
 
 ## Requerimientos
 
